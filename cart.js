@@ -32,10 +32,26 @@ const cart = [
         price: 7.99
     }
 ]
+let cart1 = {
+    name: 'pizza',
+    price: 9.99
+}
 
-//CODE HERE
+let cart2 = {
+    name: 'pasta',
+    price: 8.99
+}
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+let cart3 = {
+    name: 'salad',
+    price: 7.99
+}
+
+const summedPrice = cart.reduce((acc, curr) => { 
+    return acc + curr.price;
+  }, 0);
+  
+  console.log(summedPrice); 
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,9 +69,14 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax){
+    const taxAmount = cartTotal * tax;
+    const totalWithTax = cartTotal + taxAmount;
+    const finalTotal = totalWithTax + taxAmount;
+    return finalTotal
+}
 
-
+console.log(calcFinalPrice(9.99, 8.99, 7.99))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,7 +99,12 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+   I am going to use name, phone number, birthday, and email as my properties. 
+   These four items are basic information for restaraunts to know to send texts, emails, and mail to get
+   information out to the customers.
+
+   since name and email are mostly words, they should be strings. 
+   Phone number and birthday should be numbers because... well... I think it's self explanatory. Haha
 
 */
 
@@ -87,4 +113,10 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    name: 'John',
+    phone: 555-555-5555,
+    birthday: 01/02/03,
+    email: 'johntheman@hotmail.com',
+}
+
