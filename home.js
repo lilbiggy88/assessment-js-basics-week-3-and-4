@@ -85,7 +85,11 @@ console.log(canWeDeliver('85205'))
 */
 
 const canWeDeliverTwo = (zipcode) => {
-
+if(canWeDeliverTwo.includes(zipcode)){
+    return true
+} else{
+    return false
+}
 }
 
 

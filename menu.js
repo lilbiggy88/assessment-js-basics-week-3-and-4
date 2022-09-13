@@ -30,7 +30,15 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name: 'Mother of all pizzas',
+    price: '29.99',
+    category: 'Pizza Pie',
+    popularity: '100',
+    rating: '4.5/5',
+    tags: 'Sharable, gluten-filled',
+
+};
 
 
 
@@ -42,7 +50,8 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
+console.log(pizza.popularity),
+
 
 
 /*
@@ -52,7 +61,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza['tags'])
 
 
 /*
@@ -62,7 +71,8 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -72,7 +82,8 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -87,7 +98,7 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
+const foodArr = ['Pizzapocolypes', '19.99', '50', '2.5', 'gluten-free' ]
 
 
 
@@ -103,7 +114,8 @@
     your food objects has.
 */
 
-//CODE HERE
+const filteredFood = foodArr.filter(word => word.length > 6)
+console.log(filteredFood)
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
@@ -148,8 +160,22 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
-
+function filterByProperty(property, number, type) {
+    let filteredArray = [];
+    for (let i = 0; i < foods.length; i++) {
+    let food = foods[i];
+    if (type === 'above') {
+    if (food[property] > number) {
+    filteredArray.push(food);
+    }
+    } else if (type === 'below') {
+    if (food[property] < number) {
+    filteredArray.push(food);
+    }
+    }
+    }
+    return filteredArray;
+    }
 
 /*
     Invoke the `filterByProperty` function passing
@@ -158,4 +184,4 @@
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+console.log(filterByProperty)
