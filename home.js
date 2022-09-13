@@ -21,7 +21,9 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
+const greetUser = (username) => `Welcome back, ${username}!`
+console.log(greetUser('Andrew'))
+
 
 
 
@@ -49,8 +51,20 @@
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
-//CODE HERE
+const canWeDeliver = (zipcode) => {
+    for(let i = 0; i = zipcode.length; i++){
+        if(zipcode[i] = deliveryAreaZipCodes){
+            return `You're in the delivery Zone!`
+        } else{
+            return `Sorry, we cannot deliver to that address.`
+        }
+    }
+    return(canWeDeliver('85205'))
+}
 
+console.log(canWeDeliver('85205'))
+
+//
 
 
 /* 
@@ -70,7 +84,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+const canWeDeliverTwo = (zipcode) => {
+
+}
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -106,7 +123,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+const newTitle = deals.toString().replace('15%', '10%');
+console.log(newTitle)
+
 
 
 
@@ -123,4 +142,5 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+const newDate = deals.toString().replace('March', 'April')
+console.log(newDate)
