@@ -90,6 +90,7 @@ if(canWeDeliverTwo.includes(zipcode)){
 } else{
     return false
 }
+return canWeDeliverTwo(zipcode)
 }
 
 
