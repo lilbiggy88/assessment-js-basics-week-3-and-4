@@ -146,3 +146,5 @@ console.log(addEmployees.manager('coach'))
 */
 
 console.log(getEmployees.manager())
+
+//Here is my Design: https://www.figma.com/file/aOFB6XgaerpY4fHBF1zXNu/SEE-FOOD-Restauraunt?node-id=0%3A1
