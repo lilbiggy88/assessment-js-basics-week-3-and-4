@@ -26,8 +26,8 @@ class Employee {
     }
         
     
-    getSchedule() {
-        console.log `${this.name} works on ${this.shifts} `
+    getSchedule(){
+        console.log (`${this.name} works on ${this.shifts}`)
     }
 }
 
@@ -51,9 +51,7 @@ let empOne = new Employee('Jess', 'weekday mornings, weekday afternoons')
     `empOne` object.
 */
 
-getSchedule(empOne); {
-console.log(empOne.name)
-}
+console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object
@@ -67,7 +65,7 @@ console.log(empOne.name)
     dot or bracket notation.
 */
 
-const empTwo = {...Employee(Nick, '')};
+const empTwo = { ...Employee('Nick', '')};
 
 
 
@@ -96,14 +94,15 @@ const empTwo = {...Employee(Nick, '')};
 
 class Manager extends Employee {
     constructor(name, shifts, employees){
-        this.employees = [];
+        this.employees = employees;
         super(name, shifts);
         
     }
    getEmployees(){
-    console.log('${this.name} manages ${this.employees')
+    console.log(`${this.name} manages ${this.employees}.`)
    }
   addEmployees(emp) {
+    this.employees.push(emp)
     console.log(emp(this.employees))
   }
 
@@ -129,7 +128,7 @@ let manager = new Employee('Winston', 'weekday mornings, weekday afternoons', 'C
     `manager` object.  
 */
 
-console.log(getEmployees.manager())
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -137,7 +136,7 @@ console.log(getEmployees.manager())
     'Coach' or whatever name you'd like.
 */
 
-console.log(addEmployees.manager('coach'))
+manager.addEmployees('coach')
 
 /*
     Call the `getEmployees` method on the
@@ -145,6 +144,6 @@ console.log(addEmployees.manager('coach'))
     that an employee was added.
 */
 
-console.log(getEmployees.manager())
+manager.getEmployees()
 
 //Here is my Design: https://www.figma.com/file/aOFB6XgaerpY4fHBF1zXNu/SEE-FOOD-Restauraunt?node-id=0%3A1

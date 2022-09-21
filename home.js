@@ -52,17 +52,17 @@ console.log(greetUser('Andrew'))
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 const canWeDeliver = (zipcode) => {
-    for(let i = 0; i = zipcode.length; i++){
-        if(zipcode[i] = deliveryAreaZipCodes){
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes[i] === zipcode){
             return `You're in the delivery Zone!`
         } else{
-            return `Sorry, we cannot deliver to that address.`
+           return "Sorry, we are not able to deliver here."
         }
     }
-    return(canWeDeliver('85205'))
+    
 }
 
-console.log(canWeDeliver('85205'))
+console.log(canWeDeliver(85205))
 
 //
 
@@ -128,10 +128,10 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-const newTitle = deals.toString().replace('15%', '10%');
-console.log(newTitle)
 
+deals[0].title = deals[0].title.replace('5', '0');
 
+console.log(deals)
 
 
 /*
@@ -147,5 +147,5 @@ console.log(newTitle)
     to be displaying wrong on the live site.
 */
 
-const newDate = deals.toString().replace('March', 'April')
-console.log(newDate)
+deals[1].desc = deals[1].desc.replaceAll('March', 'April');
+console.log(deals)

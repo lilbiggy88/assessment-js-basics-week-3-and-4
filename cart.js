@@ -69,14 +69,14 @@ const summedPrice = cart.reduce((acc, curr) => {
     decimals, for example: .06 for a 6% tax.
 */
 
-function calcFinalPrice(cartTotal, couponValue, tax){
-    const taxAmount = cartTotal * tax;
-    const totalWithTax = cartTotal + taxAmount;
-    const finalTotal = totalWithTax + taxAmount;
-    return finalTotal
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    const taxTotal = cartTotal * tax;
+    return cartTotal + taxTotal - couponValue
 }
 
-console.log(calcFinalPrice(9.99, 8.99, 7.99))
+
+
+console.log(calcFinalPrice(26.97, 5, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -115,8 +115,9 @@ console.log(calcFinalPrice(9.99, 8.99, 7.99))
 
 const customer = {
     name: 'John',
-    phone: 555-555-5555,
-    birthday: 01/02/03,
+    phone: '555-555-5555',
+    birthday: 'February 2, 1993',
     email: 'johntheman@hotmail.com',
 }
 
+console.log(customer)

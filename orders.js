@@ -34,11 +34,12 @@ class Ticket {
         this.item = items;
         this.orderTime = orderTime;
         this.customerId = customerId;
+        this.status = queued;
         }
 
     updateStatus(newStatus){
         this.status = newStatus;
-        console.log('The order for customer [${customerId}] is now [${this.status}].')
+        console.log(`The order for customer [${customerId}] is now [${this.status}].`)
     }
 }
 
@@ -55,7 +56,7 @@ class Ticket {
     customer: 575
 */
 
-let firstTicket = new Ticket('pizza, bread, and soda', '7:03pm', '575')
+let firstTicket = new Ticket(['pizza, bread, and soda', '7:03pm', '575'], '6:15pm', 575)
 
 
 /*
@@ -64,4 +65,4 @@ let firstTicket = new Ticket('pizza, bread, and soda', '7:03pm', '575')
     'cooking'
 */
 
-updateStatus(firstTicket('cooking'))
+firstTicket(updateStatus('cooking'))
